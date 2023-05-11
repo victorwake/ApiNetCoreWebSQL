@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uL3cAoLvK8kgQz+tW/rsL9DNirifn9CmPIA2NaNwNlmuXfCi6B0czHWgnznAPNddHwtWrMG/Gzx3ZQLU/jN/+w==",
+  "dgSpecHash": "0VMAuR2lPAADTdxxwX9yfNtHp0RK8Zc9PGfWtsG0PVGhlwLsDUZcRhHRW3lV6QeDtGYHNtVfByHxk4CcIAIH4w==",
   "success": true,
-  "projectFilePath": "C:\\NetCore\\LeerData\\leerData.csproj",
+  "projectFilePath": "C:\\NetCore\\leerData\\leerData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

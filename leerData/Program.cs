@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace leerData
 {
@@ -6,10 +8,13 @@ namespace leerData
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            for (int i = 0; i < 10; i++)
+            using(var db = new AppVentaCursosContext())
             {
-                Console.WriteLine(i);
+                var cursos = db.Curso.Include(p => p.PrecioPromocion).AsNoTracking();
+                foreach(var curso in cursos)
+                {
+                    Console.WriteLine(curso.Titulo + " " + curso.PrecioPromocion.PrecioActual);
+                }
             }
         }
     }
