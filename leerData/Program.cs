@@ -10,10 +10,14 @@ namespace leerData
         {
             using(var db = new AppVentaCursosContext())
             {
-                var cursos = db.Curso.Include(p => p.PrecioPromocion).AsNoTracking();
+                var cursos = db.Curso.Include(c => c.InstructoresLink).ThenInclude(ci => ci.Instructor);//Sirve para incluir la tabla intermedia CursoInstructor y la tabla Instructor
                 foreach(var curso in cursos)
                 {
-                    Console.WriteLine(curso.Titulo + " " + curso.PrecioPromocion.PrecioActual);
+                    Console.WriteLine("Curso: " + curso.Titulo);
+                    foreach(var inslink in curso.InstructoresLink)
+                    {
+                        Console.WriteLine("Profesor: " + inslink.Instructor.Nombre);
+                    }
                 }
             }
         }
